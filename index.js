@@ -37,7 +37,11 @@ function createTimeOutEvent(employee, dateStamp){
    return employee
 }
 
+<<<<<<< HEAD
 function hoursWorkedOnDate(employee, soughtDate){
+=======
+let hoursWorkedOnDate = function(employee, soughtDate){
+>>>>>>> 667f090373f464f329fb565d2b608d7ec5afbab6
     let inEvent = employee.timeInEvents.find(function(e){
         return e.date === soughtDate
     })
@@ -47,12 +51,17 @@ function hoursWorkedOnDate(employee, soughtDate){
 
  return (outEvent.hour - inEvent.hour) / 100
 }
+<<<<<<< HEAD
 
  function wagesEarnedOnDate(employee, dateSought){
+=======
+let wagesEarnedOnDate = function(employee, dateSought){
+>>>>>>> 667f090373f464f329fb565d2b608d7ec5afbab6
     let rawWage = hoursWorkedOnDate(employee, dateSought)
         * employee.payPerHour
     return parseFloat(rawWage.toString())
 }
+<<<<<<< HEAD
 
  function allWagesFor(employee){
     let eligibleDates = employee.timeInEvents.map(function(e){
@@ -75,3 +84,9 @@ let findEmployeeByFirstName = function(srcArray, firstName) {
     return rec.firstName === firstName
   })
 }
+=======
+let allWagesFor = function(employee){
+    let eligibleDates = employee.timeInEvents.map(function(e){
+        return e.date
+    })
+>>>>>>> 667f090373f464f329fb565d2b608d7ec5afbab6
